@@ -59,8 +59,11 @@
     <None Include="App.config" />
     <Compile Include="AssemblyInfo.fs" />
     <Resource Include="App.xaml" />
-    <Compile Include="MainViewModel.fs" />
+    <Resource Include="Welcome.xaml" />
+    <Compile Include="WelcomeViewModel.fs" />
     <Resource Include="MainWindow.xaml" />
+    <Compile Include="MainViewModel.fs" />
+    <Compile Include="Controls.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

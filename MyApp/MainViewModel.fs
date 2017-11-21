@@ -1,9 +1,7 @@
 ﻿namespace MyApp
 
-open MyApp.Library
-
 type MainViewModel () =
-  let welcomeTextProvider = WelcomeTextProvider ()
+  let welcome = WelcomeViewModel ()
 
-  member vm.WelcomeText
-    with get() = welcomeTextProvider.GetWelcomeText ()
+  member vm.Welcome
+    with get() = welcome

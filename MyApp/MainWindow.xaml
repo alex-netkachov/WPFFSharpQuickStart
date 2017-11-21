@@ -10,13 +10,6 @@
         <local:MainViewModel />
     </Window.DataContext>
     <Grid>
-        <Border BorderBrush="{x:Null}"
-                Height="50">
-            <TextBlock Text="{Binding WelcomeText}"
-                       VerticalAlignment="Stretch"
-                       TextAlignment="Center"
-                       FontFamily="Segoe"
-                       FontSize="26" />
-        </Border>
+        <local:Welcome DataContext="{Binding Welcome}" />
     </Grid>
 </Window>
