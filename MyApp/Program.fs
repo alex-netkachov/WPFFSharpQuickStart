@@ -1,14 +1,9 @@
 ﻿open System
-open System.Windows
-open System.Windows.Controls
-open System.Windows.Markup
+open MyApp
 
 [<STAThread>]
 [<EntryPoint>]
-let main(_) =
-  let appUri = Uri ("App.xaml", UriKind.Relative)
-  let application = appUri
-                    |> Application.LoadComponent
-                    :?> Application
-  application.Run() |> ignore
+let main (_) =
+  let application = App()
+  application.Run () |> ignore
   0

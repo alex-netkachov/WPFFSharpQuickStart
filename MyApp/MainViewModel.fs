@@ -1,9 +1,14 @@
 ﻿namespace MyApp
 
-open MyApp.Library
+open System.Reactive.Concurrency
+open System.Windows
+open ReactiveUI
 
 type MainViewModel () =
-  let welcomeTextProvider = WelcomeTextProvider ()
+  let welcome = WelcomeViewModel ()
 
-  member vm.WelcomeText
-    with get() = welcomeTextProvider.GetWelcomeText ()
+  do
+    RxApp.MainThreadScheduler <- DispatcherScheduler(Application.Current.Dispatcher)
+
+  member vm.Welcome
+    with get() = welcome
